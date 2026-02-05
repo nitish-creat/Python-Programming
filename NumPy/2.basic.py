@@ -1,3 +1,8 @@
+'''
+Library → a collection of code that provides functionality
+Package → a structured container that organizes libraries/modules
+'''
+
 import numpy as np
 
 a = np.arange(1,5).reshape(2,2)
