@@ -60,3 +60,27 @@ df_dropped_col = df.dropna(axis=1)
 print("<<-- Dropping cols with missing value -->>")
 print(df_dropped_col)
 
+# Forward fill update to avoid future warning
+df_ffill = df_filled.ffill()
+print("dataframe after forwaard filling")
+print(df_ffill)
+
+# backWard fill update to avoid future warning
+df_bfill = df_filled.bfill()
+print("Data frame after backward filling")
+print(df_bfill)
+
+#InterPloting missing values (updated to avoid future warning)
+df_numeric = df_bfill.select_dtypes(include=[np.number])
+df_interpolated = df_numeric.interpolate()
+
+# merge back non-numeric columns
+df_final = df_bfill.copy()
+df_final[df_numeric.columns]= df_interpolated
+print("Dataframe after interpolated")
+print(df_final)
+
+#Saving cleaned data
+
+clean_file_path = "ABC.csv"
+df_final.to_csv(clean_file_path,index= False)
