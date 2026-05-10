@@ -9,7 +9,7 @@ print(a)
 
 mul = pd.Series([[2,32,3],['a']])
 print(mul)
-ser1= pd.Series(np.linspace(3,33,3))
+ser1= pd.Series(np.linspace(3,33,4))
 # linspace(3,33,3)  start, space, element no.
  
 

@@ -1,7 +1,7 @@
 import numpy as np
 print("<<--- 1D Array --->>")
 
-a = np.array([1,3,5,5,2,])
+a = np.array([1,3,5,5,2])
 print(a)
 print(f"type of the array : {type(a)}")
 print("\n<<--- 2D Array --->>")
